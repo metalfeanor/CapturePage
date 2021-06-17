@@ -149,14 +149,14 @@ function checkInputs() {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "/");
     xhr.setRequestHeader("content-type", "application/json");
-    /*xhr.onload = function () {
+    xhr.onload = function () {
       console.log(xhr.responseText);
       if (xhr.responseText == "success") {
         alert("email sent");
       } else {
         alert("quelque chose s'est mal passé");
       }
-    };*/
+    };
     xhr.send(JSON.stringify(data));
     //console.log(JSON.stringify(data));
 

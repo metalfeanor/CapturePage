@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.post("/", (req, res) => {
+app.post("/public/index.html", (req, res) => {
   console.log(req.body);
 
   const transporter = nodemailer.createTransport({
