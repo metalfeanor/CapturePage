@@ -8,13 +8,13 @@ const PORT = process.env.PORT || 5500;
 app.use(express.static("public"));
 app.use(express.json());
 
-const router = express.Router();
+//const router = express.Router();
 
-router.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-router.post("/", (req, res) => {
+app.post("/", (req, res) => {
   console.log(req.body);
 
   const transporter = nodemailer.createTransport({
@@ -43,7 +43,7 @@ router.post("/", (req, res) => {
   });
 });
 
-app.use(`/.netlify/functions/server`, router);
+//app.use(`/.netlify/functions/server`, router);
 //app.use("/", (req, res) => res.sendFile(__dirname + "../public/index.html"));
 
 /*app.get("/", (req, res) => {
