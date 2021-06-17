@@ -148,7 +148,7 @@ function checkInputs() {
     /*****here send information to backend data format Json ***/
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "/");
-    xhr.setRequestHeader("content-type", "application/json");
+    xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
     xhr.onload = function () {
       console.log(xhr.responseText);
       if (xhr.responseText == "success") {
