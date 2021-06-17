@@ -5,11 +5,11 @@ const app = express();
 
 const PORT = process.env.PORT || 5500;
 
+const router = express.Router();
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extend: false }));
 app.use(express.json());
-
-const router = express.Router();
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
@@ -44,7 +44,7 @@ app.post("/", (req, res) => {
   });
 });
 
-app.use(`/.netlify/functions/server`, router);
+//app.use(`/.netlify/functions/server`, router);
 //app.use("/", (req, res) => res.sendFile(__dirname + "../public/index.html"));
 
 /*app.get("/", (req, res) => {
