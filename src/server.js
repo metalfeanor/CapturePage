@@ -10,11 +10,11 @@ app.use(express.json());
 
 const router = express.Router();
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.post("/public/index.html", (req, res) => {
+router.post("/", (req, res) => {
   console.log(req.body);
 
   const transporter = nodemailer.createTransport({
