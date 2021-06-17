@@ -1,5 +1,5 @@
 {
-  "name": "CapturePage",
+  "name": "capturepage",
   "version": "1.0.0",
   "description": "Capture Page with email sended automatically",
   "main": "app.js",
