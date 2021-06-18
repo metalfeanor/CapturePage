@@ -90,7 +90,7 @@ module.exports = app;
 module.exports.handler = serverless(app);
 /*
 const nodemailer = require("nodemailer");
-
+*/
 exports.handler = async function (event, context, callback) {
   // Parse the JSON text received.
   const body = JSON.parse(event.body);
@@ -136,4 +136,4 @@ exports.handler = async function (event, context, callback) {
     // Catch and log error.
     callback(error);
   }
-};*/
+};
