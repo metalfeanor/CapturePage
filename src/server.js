@@ -1,13 +1,12 @@
-/*
 const express = require("express");
 const serverless = require("serverless-http");
 const nodemailer = require("nodemailer");
 const app = express();
-
+/*
 const PORT = process.env.PORT || 5500;
-
+*/
 const router = express.Router();
-
+/*
 app.use(express.static("public"));
 app.use(express.urlencoded({ extend: false }));
 app.use(express.json());
@@ -44,9 +43,9 @@ app.post("/", (req, res) => {
     }
   });
 });
-
-app.use(`/.netlify/functions/server`, router);
 */
+app.use(`/.netlify/functions/server`, router);
+
 //app.use("/", (req, res) => res.sendFile(__dirname + "../public/index.html"));
 
 /*app.get("/", (req, res) => {
@@ -85,11 +84,11 @@ app.post("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`server running on PORT ${PORT}`);
 });*/
-/*
+
 module.exports = app;
 
 module.exports.handler = serverless(app);
-*/
+
 const nodemailer = require("nodemailer");
 
 exports.handler = async function (event, context, callback) {
