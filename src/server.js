@@ -43,7 +43,7 @@ app.post("/", (req, res) => {
     }
   });
 });
-*/
+
 app.use(`/.netlify/functions/server`, router);
 
 //app.use("/", (req, res) => res.sendFile(__dirname + "../public/index.html"));
