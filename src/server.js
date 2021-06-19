@@ -5,10 +5,10 @@ const app = express();
 /*
 const PORT = process.env.PORT || 5500;
 */
-const router = express.Router();
+//const router = express.Router();
 
 app.use(express.static("public"));
-app.use(express.urlencoded({ extend: false }));
+//app.use(express.urlencoded({ extend: false }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -44,7 +44,7 @@ app.post("/", (req, res) => {
   });
 });
 
-app.use(`/.netlify/functions/server`, router);
+//app.use(`/.netlify/functions/server`, router);
 
 //app.use("/", (req, res) => res.sendFile(__dirname + "../public/index.html"));
 
@@ -90,7 +90,7 @@ module.exports = app;
 module.exports.handler = serverless(app);
 /*
 const nodemailer = require("nodemailer");
-*/
+
 exports.handler = async function (event, context, callback) {
   // Parse the JSON text received.
   const body = JSON.parse(event.body);
@@ -136,4 +136,4 @@ exports.handler = async function (event, context, callback) {
     // Catch and log error.
     callback(error);
   }
-};
+};*/
