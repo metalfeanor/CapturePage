@@ -21,8 +21,8 @@ app.post("/", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "nam.testeur@gmail.com",
-      pass: "pass@_Axn,fju",
+      user: "your_email",
+      pass: "your_password",
     },
   });
 
@@ -58,8 +58,8 @@ app.post("/", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "nam.testeur@gmail.com",
-      pass: "pass@_Axn,fju",
+      user: "your_email",
+      pass: "your_password",
     },
   });
 
@@ -106,8 +106,8 @@ exports.handler = async function (event, context, callback) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "nam.testeur@gmail.com",
-      pass: "pass@_Axn,fju",
+      user: "your_email",
+      pass: "your_password",
     },
   });
 
